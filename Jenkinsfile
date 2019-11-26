@@ -20,7 +20,7 @@ agent any
         }  
         stage('Run NGINX Contianer') {
             steps {
-                echo 'something'
+                sh 'docker run -d --name my-website nginx'
             }
         }  
     }
