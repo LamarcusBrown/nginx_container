@@ -15,7 +15,7 @@ agent any
         }  
         stage('Build NGINX Image') {
             steps {
-                echo 'something'
+                sh 'docker tag centos local-centos'
             }
         }  
         stage('Run NGINX Contianer') {
