@@ -10,12 +10,12 @@ agent any
 
         stage('Tag CentOS Image') {
             steps {
-                echo 'something'
+                sh 'docker tag centos local-centos'
             }
         }  
         stage('Build NGINX Image') {
             steps {
-                sh 'docker build -t NGINX .'
+                sh 'docker build -t nginx .'
             }
         }  
         stage('Run NGINX Contianer') {
