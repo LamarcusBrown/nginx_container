@@ -20,7 +20,7 @@ agent any
         }  
         stage('Run NGINX Contianer') {
             steps {
-                sh 'docker run -d --name my-website nginx'
+                sh 'docker run -d -p 8081:8081 --name my-website nginx'
             }
         }  
     }
