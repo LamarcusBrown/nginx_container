@@ -4,7 +4,7 @@ agent any
     stages {
         stage('Pull CentOS Image') {
             steps {
-                sh 'docker pull centod'
+                sh 'docker pull centos'
             }
         }  
 
