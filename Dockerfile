@@ -2,7 +2,7 @@ FROM local-centos
 
 RUN yum install nginx -y
 
-COPY index.html /var/www/html/
+ADD www /usr/share/nginx/html/
 
 EXPOSE 80
 
