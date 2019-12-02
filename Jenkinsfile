@@ -20,7 +20,10 @@ agent any
         }  
         stage('Run NGINX Contianer') {
             steps {
-                sh 'docker run -d --publish-all=true --name my-website nginx'
+                echo 'Clean up old containers'
+                sh 'docker rm -f my-website'
+                echo 'Launch new container'
+                sh 'docker run -d --publish-all=true -p 8081:80 --hostname my-website --name my-website nginx'
             }
         }  
     }
